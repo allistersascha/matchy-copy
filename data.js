@@ -16,11 +16,22 @@
 //debug with console.log()
 //only do parts 1 and 2
 
+var animal = {};
+animal.species = "cat";
+animal["name"] = "Princess Snugglepuss";
+animal.noises = [];
+console.log(animal);
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
+var noises = [];
+noises[0] = "mrrow";
+noises.push("mee-EEEYYOW!!");
+noises.unshift("rrrrrowowwwww??");
+noises[noises.length] = "prrrrrRRRrRRrrp";
+console.log(noises.length);
+console.log(noises[noises.length-1]);
+console.log(noises);
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
