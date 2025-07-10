@@ -36,7 +36,9 @@ console.log(noises);
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+animal["noises"] = noises;
+animal.noises.push("squeeeek");
+console.log(animal);
 
 
 /* *******************************************************************
@@ -61,15 +63,52 @@ console.log(noises);
 //////////////////////////////////////////////////////////////////////
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+var animals = [];
+animals.push(animal);
+console.log(animals);
 
+var duck = {
+  species: "duck",
+  name: "Jerome",
+  noises: ["quack", "honk", "sneeze", "woosh"]
+};
+animals.push(duck);
+
+var dog = {
+  species: "dog",
+  name: "Bailey",
+  noises: ["woof", "awooo?", "nomnomnom"]
+};
+animals.push(dog);
+
+var bat = {
+  species: "bat",
+  name: "Bela",
+  noises: ["eeekeekeeekekeke", "screee", "chirpchirp"]
+};
+animals.push(bat);
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+var friends = [];
+//chose an array because it is a list in no particular order
+console.log(animals);
+function getRandom(animals){
+  /*
+  var rando = Math.random() * (Math.floor(animals.length + 1) - Math.ceil(0));
+  return rando;
+  */
+  var rando = Math.floor(Math.random() * animals.length + 1);
+  return rando;
+}
 
+friends.push(animals[getRandom(animals)].name);
 
-
+//friends array into prop on an object in animals array
+animals[1]["friends"] = friends;
+console.log(animals[1]);
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
  * move onto Part 2 in the file called "functions.js"
