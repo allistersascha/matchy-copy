@@ -100,7 +100,7 @@ function getRandom(animals){
   var rando = Math.random() * (Math.floor(animals.length + 1) - Math.ceil(0));
   return rando;
   */
-  var rando = Math.floor(Math.random() * animals.length + 1);
+  var rando = Math.floor(Math.random() * animals.length);
   return rando;
 }
 
