@@ -55,7 +55,7 @@ function remove(animals, name){
 //////////////////////////////////////////////////////////////////////
 function add(animals, animal){
     
-        if ((search(animals, animal) === null) && (Object.hasOwn(animal, "name"))
+        if ((search(animals, animal.name) === null) && (Object.hasOwn(animal, "name"))
         && (Object.hasOwn(animal, "species")) && (animal["name"].length > 0) 
         && (animal["species"].length > 0)){
             animals.push(animal);
